@@ -8,13 +8,24 @@ import (
 
 func main() {
 	models.Conectar()
-	models.CrearUE()
-	ue := models.UnidadEducativa{
+	models.CrearTablaProfesor()
+	/*ue := models.UnidadEducativa{
 		Nombre:    "unidad1",
 		Direccion: "sadofja Nª124",
 		Correo:    "asdasf@gmail.com",
+	}*/
+	//ue.IngresarUE()
+
+	prof := models.Profesor{
+		Ci:          8337564,
+		Nombres:     "Christian Scion",
+		Paterno:     "Marban",
+		Materno:     "Callisaya",
+		Correo:      "marbanchristian@gmail.com",
+		Contrasenia: "1010csmc",
+		Idue:        1,
 	}
-	ue.IngresarUE()
+	prof.IngresarProfesor()
 	models.Cerrar()
 	fmt.Println("hola")
 }
