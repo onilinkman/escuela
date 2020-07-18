@@ -1,5 +1,7 @@
 package models
 
+import "log"
+
 //Profesor modelo de la clase profesor
 type Profesor struct {
 	Ci          int    `json:"ci"`
@@ -61,13 +63,15 @@ func GetProfesor(cis int) Profesor {
 	profesor := Profesor{}
 	if row.Next() {
 		row.Scan(&profesor.Ci, &profesor.Nombres, &profesor.Paterno, &profesor.Materno, &profesor.Correo, &profesor.Contrasenia, &profesor.Idue)
+	} else {
+		log.Println("no se encontro ningun profesor con esa ci")
 	}
 	return profesor
 }
 
 //GuardarProfesor guarda los datos del profesor que fueron cambiados
 func (p *Profesor) GuardarProfesor() {
-	query := `UPDATE profesor SET nombres=?,paterno=?,materno=?,correo=?,contrasenia=?,ue_idue WHERE ci=?`
+	query := `UPDATE profesor SET nombres=?,paterno=?,materno=?,correo=?,contrasenia=?,ue_idue=? WHERE ci=?`
 	p.Contrasenia = Encriptar(p.Contrasenia)
 	EjecutarExec(query, &p.Nombres, &p.Paterno, &p.Materno, &p.Correo, &p.Contrasenia, &p.Idue, p.Ci)
 }
