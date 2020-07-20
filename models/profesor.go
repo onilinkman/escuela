@@ -57,10 +57,10 @@ func GetProfesores() Profesores {
 }
 
 //GetProfesor obtiene un profesor con su ci
-func GetProfesor(cis int) Profesor {
+func GetProfesor(cis int) *Profesor {
 	query := `select * from profesor WHERE ci=?`
 	row := EjecutarQuery(query, cis)
-	profesor := Profesor{}
+	profesor := &Profesor{}
 	if row.Next() {
 		row.Scan(&profesor.Ci, &profesor.Nombres, &profesor.Paterno, &profesor.Materno, &profesor.Correo, &profesor.Contrasenia, &profesor.Idue)
 	} else {
