@@ -34,10 +34,10 @@ func (m *Materia) IngresarMateria() {
 }
 
 //GetMateria devuelve una estructura del tipo materia segun su idmateria de la base de datos
-func GetMateria(idmateria int) Materia {
+func GetMateria(idmateria int) *Materia {
 	query := `SELECT * FROM materia WHERE idmateria=?`
 	row := EjecutarQuery(query, idmateria)
-	materia := Materia{}
+	materia := &Materia{}
 	if row.Next() {
 		row.Scan(&materia.Idmateria, &materia.Notamin, &materia.Notafinal, &materia.Nombre, &materia.Gestion)
 	} else {
