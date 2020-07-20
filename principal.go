@@ -9,7 +9,12 @@ import (
 func main() {
 	models.Conectar()
 
-	models.CrearTablaDicta()
+	models.CrearTablaAlumno()
+
+	alumno := models.GetAlumno(1)
+	alumno.Nombres = "christian"
+	alumno.GuardarAlumno()
+	fmt.Println(alumno)
 
 	models.Cerrar()
 	fmt.Println("hola")

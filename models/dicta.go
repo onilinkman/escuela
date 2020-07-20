@@ -38,3 +38,17 @@ func (d *Dicta) IngresarDicta() {
 	query := `INSERT INTO dicta (ci_profesor,id_recurso,id_materia) VALUES (?,?,?)`
 	EjecutarExec(query, &d.Ciprofesor, &d.Idrecurso, &d.Idmateria)
 }
+
+//GetRecursoDicta obtiene todos los recursos dependiendo de la id del profesor y la materia
+func GetRecursoDicta(ciprof, idmateria int) Recursos {
+	query := `SELECT re.* FROM recurso re,(select di.* FROM dicta di WHERE di.ci_profesor=? AND di.id_materia=?) tmp
+	WHERE re.idrecurso=tmp.id_recurso`
+	rows := EjecutarQuery(query, ciprof, idmateria)
+	recursos := Recursos{}
+	for rows.Next() {
+		recurso := Recurso{}
+		rows.Scan(&recurso.Idrecurso, &recurso.Titulo, &recurso.Direccion)
+		recursos = append(recursos, recurso)
+	}
+	return recursos
+}
