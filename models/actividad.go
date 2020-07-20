@@ -36,10 +36,10 @@ func (ac *Actividad) IngresarActividad() {
 }
 
 //GetActividad devuelve una actividad de la base de datos segun su id
-func GetActividad(idact int) Actividad {
+func GetActividad(idact int) *Actividad {
 	query := `SELECT * FROM actividad WHERE idactividad=?`
 	row := EjecutarQuery(query, idact)
-	actividad := Actividad{}
+	actividad := &Actividad{}
 	if row.Next() {
 		row.Scan(&actividad.Idactividad, &actividad.Fecha, &actividad.Fechavenc, &actividad.Nombre, &actividad.Tipo, &actividad.Nota)
 	} else {
