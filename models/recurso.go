@@ -28,8 +28,8 @@ func (r *Recurso) IngresarRecurso() {
 }
 
 //GetRecurso obtiene una estructura recurso dependiendo al id
-func GetRecurso(idrecurso int) Recurso {
-	recurso := Recurso{}
+func GetRecurso(idrecurso int) *Recurso {
+	recurso := &Recurso{}
 	query := `select * from recurso where idrecurso=?`
 	row := EjecutarQuery(query, idrecurso)
 	if row.Next() {
