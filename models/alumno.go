@@ -47,10 +47,10 @@ func (al *Alumno) IngresarAlumno() {
 }
 
 //GetAlumno Devuelve un alumno con su id
-func GetAlumno(id int) Alumno {
+func GetAlumno(id int) *Alumno {
 	query := `SELECT * from alumno WHERE idalumno=?`
 	row := EjecutarQuery(query, id)
-	alumno := Alumno{}
+	alumno := &Alumno{}
 	if row.Next() {
 		row.Scan(&alumno.Idalumno, &alumno.Nombres, &alumno.Paterno, &alumno.Materno, &alumno.Ci, &alumno.Correo, &alumno.Contrasenia, &alumno.Activo, &alumno.Idue)
 	} else {
