@@ -1,0 +1,26 @@
+body{
+    background: rgb(73, 73, 94);
+}
+
+.cuerpo{
+    border-radius: 20px;
+    background: linear-gradient(rgb(37, 50, 53),rgba(68, 67, 67, 0.829));
+    margin: auto;
+    width: 35%;
+    border-style: solid;
+    border-color:rgba(204, 204, 255, 0.623);
+}  
+
+.cuerpo-reg1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: cornsilk;
+    margin: auto;
+    width: 60%;
+    align-items: center;
+}
+
+.cuerpo-bot{
+    margin: 10px;
+    
+}
