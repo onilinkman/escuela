@@ -8,6 +8,7 @@ import (
 	"./handlers"
 	v1 "./handlers/api/v1"
 	"./models"
+	"./utils"
 	"github.com/gorilla/mux"
 )
 
@@ -21,8 +22,10 @@ func main() {
 	mux.PathPrefix("/assets/").Handler(statics)
 
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "hola")
+		contexto := make(map[string]interface{})
+		utils.RenderTemplate(w, "inicio", contexto)
 	})
+	mux.HandleFunc("/profesor", handlers.MenuProfesor)
 
 	mux.HandleFunc("/profesor/new", handlers.NuevoProfesor).Methods("GET", "POST")
 
