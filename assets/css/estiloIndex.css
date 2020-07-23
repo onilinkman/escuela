@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    top: 0;
+    margin: 0;
+}
+
+.id-header{
+    background:rgba(10, 10, 10, 0.623); /*linear-gradient(rgba(5, 120, 124, 0.842),rgba(2, 101, 131, 0.034));*/
+
+    color: cornsilk;
+    text-align: center;
+    background-size: cover;
+    line-height: 8em;
+}
+body{
+    background-image: url("../imagenes/pizarra-vacia_53876-31358.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    line-height: 5em;
+}
+
+
+
+.reg-cuerpo{
+    background-color: rgba(2, 2, 2, 0.418);
+    border-color: rgba(47, 79, 79, 0.137);
+    text-align: right;
+}
+.cuerpo a{
+    background-color: rgb(15, 24, 15);
+    margin-left: 75px;
+    margin-right: 8px;
+    color: blanchedalmond;
+}
+
+
+
+
+/*.cuerpo a{
+    background-color: white;
+    border-color: yellow;
+    background: white;
+    
+
+    display: block;
+}
+/*.cuerpo a{
+    border-color: rgb(150, 150, 150);   
+    background-color: darkgrey;
+    border-radius: 10px;
+    float: right;
+    margin-left: 15px;
+    display: block;
+}*/
