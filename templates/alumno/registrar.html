@@ -1,0 +1,64 @@
+{{define "alumno/new"}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>REGISTRAR UN ALUMNO</title>
+        <link rel="stylesheet" href="../../assets/css/estiloRegAlumno.css" type="text/css">
+    </head>
+    <body>
+        <div class="cuerpo">
+            <form class="horizontal" method="POST" action="#">
+
+                <div class="cuerpo-reg">
+                    <label class="reg-label">NOMBRES:</label>
+                    <div class="reg-llena">
+                        <input type="text" class="form-control" id="Nombres" placeholder="Ingrese nombres" name="nombres" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="cuerpo-reg">
+                    <label class="reg-label">PATERNO:</label>
+                    <div class="reg-llena">
+                        <input type="text" class="form-control" id="Paterno" placeholder="Apellido paterno" name="paterno" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="cuerpo-reg">
+                    <label class="reg-label">MATERNO:</label>
+                    <div class="reg-llena">
+                        <input type="text" class="form-control" id="Materno" placeholder="Apellido Materno" name="materno" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="cuerpo-reg">
+                    <label class="reg-label">Ci:</label>
+                    <div class="reg-llena">
+                        <input type="text" class="form-control" id="Ci" placeholder="Ingrese Ci" name="ci" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="cuerpo-reg">
+                    <label class="reg-label">CORREO:</label>
+                    <div class="reg-llena">
+                        <input type="text" class="form-control" id="Correo" placeholder="Ingrese Correo" name="correo" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="cuerpo-reg">
+                    <label class="reg-label">PASSWORD:</label>
+                    <div class="reg-llena">
+                        <input type="password" class="form-control" id="Contrasenia" placeholder="Ingrese Password" name="contrasenia" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="cuerpo-reg">
+                    <div class="cuerpo-bot">
+                        <button type="submit" class="btn">REGISTRAR</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </body>
+</html>
+{{end}}
