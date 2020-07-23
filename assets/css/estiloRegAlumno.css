@@ -1,0 +1,23 @@
+body{
+    background: rgb(83, 83, 83);
+}
+
+.cuerpo{
+    
+    text-align: center;
+    align-items: center;
+}
+.horizontal{
+    margin: 35%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    float: top;
+    background: rgb(109, 108, 108);
+    border-radius: 10px;
+    border-color: blanchedalmond;
+    border-style: solid;
+    
+}
+.reg-label{
+    color: cornsilk;
+}
