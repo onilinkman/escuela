@@ -28,3 +28,9 @@ func NuevoProfesor(w http.ResponseWriter, r *http.Request) {
 	}
 	utils.RenderTemplate(w, "profesor/new", contexto)
 }
+
+//MenuProfesor enlaza la direccion hacia la pagina profesor
+func MenuProfesor(w http.ResponseWriter, r *http.Request) {
+	contexto := make(map[string]interface{})
+	utils.RenderTemplate(w, "profesor", contexto)
+}
