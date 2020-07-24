@@ -2,7 +2,6 @@ package v1
 
 import (
 	"errors"
-	"fmt"
 	"net/http"
 	"strconv"
 
@@ -12,7 +11,6 @@ import (
 
 //GetProfesor obtiene un profesor
 func GetProfesor(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("holassss")
 	if profesor, err := getProfesorByCi(r); err != nil {
 		models.SendNotFound(w)
 	} else {
