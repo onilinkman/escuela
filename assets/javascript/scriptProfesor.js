@@ -12,15 +12,13 @@ function mostrar(){
 }
 
 function escribe(){
-    //for (let i=0;i<5;i++){
-        document.getElementById('lista').innerHTML="Parrafo";
-
-    //}
+    setTimeout(()=>{
+        for (let i=0;i<5;i++){
+            document.getElementById('lista').innerHTML="<h1>Parrafo</h1>";
+    
+        }
+    },100)
 }
 
-mostrar()
-.then(function(){
-    escribe()
-}).catch(function(err){
-    console.log(err)
-});
+
+escribe()
