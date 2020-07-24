@@ -7,14 +7,28 @@
         <script src="../../assets/javascript/scriptProfesor.js" type="text/javascript" ></script>
     </head>
     <body>
-        <header class="cabecera">
-            <h1>BIENVENIDO A LA SECCION DE PROFESORES</h1>
-        </header>
-        <section id="seccion">
-            <div id="lista">
-                <label id="ho">hola</label>
+        <form  class="horizontal" method="POST" action="#">
+            <div class="reg">
+                <label class="reg-lab">INGRESE CI:</label>
+                <div class="reg-llenar">
+                    <input type="number" class="form-control" id="Ci" placeholder="Ingrese CI" name="ci" autocomplete="off" >
+                </div>
             </div>
-        </section>
+
+            <div class="reg">
+                <label class="reg-lab">INGRESE PASSWORD</label>
+                <div class="reg-llenar">
+                    <input type="password" class="form-control" id="contrasenia" placeholder="Ingrese password" name="contrasenia" >
+                </div>
+            </div>
+
+            <div class="reg">
+                <div class="btn-reg">
+                    <button type="submit" class="btn">INGRESAR</button>
+                </div>
+            </div>
+
+        </form>
     </body>
 </html>
 {{end}}

@@ -25,7 +25,7 @@ func main() {
 		contexto := make(map[string]interface{})
 		utils.RenderTemplate(w, "inicio", contexto)
 	})
-	mux.HandleFunc("/profesor", handlers.MenuProfesor)
+	mux.HandleFunc("/profesor", handlers.LoginProfesor).Methods("GET", "POST")
 
 	mux.HandleFunc("/profesor/new", handlers.NuevoProfesor).Methods("GET", "POST")
 
