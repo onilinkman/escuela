@@ -1,0 +1,34 @@
+{{define "profesor/edit"}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Editar Datos</title>
+        <link rel="stylesheet" href="../../assets/css/estiloEditProfe.css">
+        
+    </head>
+    <body>
+        <div class="cabeza">
+            <header>
+                <div class="cab-title">
+                    <h1 class="titulo">BIENVENIDO {{.nombres}} {{.paterno}} {{.materno}}</h1>
+                </div>
+            </header>
+        </div>
+
+        <div class="cuerpo">
+            <form class="cuerpo-form" method="POST" action="#">
+
+                <div class="cuerpo-reg">
+                    <label class="reg-label">NOMBRES:</label>
+                    <div class="reg-texto">
+                        <input type="text" class="form-control" id="Nombres" value="{{.nombres}}" placeholder="ingrese nombres" name="nombres" autocomplete="off">
+                    </div>
+                </div>
+
+
+
+            </form>
+        </div>
+    </body>
+</html>
+{{end}}
