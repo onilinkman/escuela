@@ -44,7 +44,7 @@ func LoginProfesor(w http.ResponseWriter, r *http.Request) {
 			fmt.Println(profesor.Ci)
 			if models.Comparar(profesor.Contrasenia, contrasenia) {
 				fmt.Println("Acceso consedido")
-				createCookie(w)
+				utils.SetSesion(profesor, w)
 			}
 		}
 
@@ -54,17 +54,22 @@ func LoginProfesor(w http.ResponseWriter, r *http.Request) {
 	utils.RenderTemplate(w, "profesor", contexto)
 }
 
+//LogoutProfesor esta funcion elimina la cookie
+func LogoutProfesor(w http.ResponseWriter, r *http.Request) {
+	utils.DeleteSesion(w)
+	http.Redirect(w, r, "/profesor/login", http.StatusSeeOther)
+}
+
+//EditProfesor envia a la pagina para editar al profesor
+func EditProfesor(w http.ResponseWriter, r *http.Request) {
+	context := make(map[string]interface{})
+	profe := utils.GetProfesor(r)
+	context["nombres"] = profe.Nombres
+	utils.RenderTemplate(w, "profesor/edit", context)
+}
+
 //MenuProfesor enlaza la direccion hacia la pagina profesor
 func MenuProfesor(w http.ResponseWriter, r *http.Request) {
 	contexto := make(map[string]interface{})
 	utils.RenderTemplate(w, "profesor", contexto)
-}
-
-func createCookie(w http.ResponseWriter) {
-	cookie := &http.Cookie{
-		Name:  "cookie_profesor",
-		Value: "cookie_value",
-		Path:  "/",
-	}
-	http.SetCookie(w, cookie)
 }
