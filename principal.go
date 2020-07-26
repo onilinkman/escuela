@@ -25,7 +25,11 @@ func main() {
 		contexto := make(map[string]interface{})
 		utils.RenderTemplate(w, "inicio", contexto)
 	})
-	mux.HandleFunc("/profesor", handlers.LoginProfesor).Methods("GET", "POST")
+	mux.HandleFunc("/profesor/login", handlers.LoginProfesor).Methods("GET", "POST")
+	mux.HandleFunc("/profesor/logout", handlers.LogoutProfesor).Methods("GET")
+	editHandler := handlers.Autentificacion(handlers.EditProfesor)
+	editHandler = handlers.MiddlewareTwo(editHandler)
+	mux.Handle("/profesor/edit", editHandler).Methods("GET", "POST")
 
 	mux.HandleFunc("/profesor/new", handlers.NuevoProfesor).Methods("GET", "POST")
 
