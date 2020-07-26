@@ -41,9 +41,7 @@ func LoginProfesor(w http.ResponseWriter, r *http.Request) {
 		if profesor.Ci == 0 {
 			fmt.Println("No existe profesor")
 		} else {
-			fmt.Println(profesor.Ci)
 			if models.Comparar(profesor.Contrasenia, contrasenia) {
-				fmt.Println("Acceso consedido")
 				utils.SetSesion(profesor, w)
 			}
 		}
