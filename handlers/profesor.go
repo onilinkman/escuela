@@ -71,3 +71,9 @@ func MenuProfesor(w http.ResponseWriter, r *http.Request) {
 	contexto := make(map[string]interface{})
 	utils.RenderTemplate(w, "profesor", contexto)
 }
+
+//InicioProfesor nos direcciona a la pagina de inicio de los profesores publica
+func InicioProfesor(w http.ResponseWriter, r *http.Request) {
+	contexto := make(map[string]struct{})
+	utils.RenderTemplate(w, "profesor/index", contexto)
+}
