@@ -26,8 +26,6 @@ var queryProfe = `CREATE TABLE if NOT EXISTS profesor(
 	ue_idue int,
 	CONSTRAINT fk_profesor_unidadEducativa
 		FOREIGN KEY (ue_idue) REFERENCES unidadEducativa(idue)
-		ON DELETE NO ACTION
-		ON UPDATE NO ACTION
 )`
 
 //CrearTablaProfesor crea la tabla profesor en la base de datos si no existe

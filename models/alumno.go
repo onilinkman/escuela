@@ -30,8 +30,6 @@ var queryAlumnos = `CREATE TABLE if NOT EXISTS alumno(
 	ue_idue int,
 	CONSTRAINT fk_alumno_unidadEducativa
 		FOREIGN KEY (ue_idue) REFERENCES unidadEducativa(idue)
-		ON DELETE NO ACTION
-		ON UPDATE NO ACTION
 )`
 
 //CrearTablaAlumno crea una tabla de alumnos en la base de datos

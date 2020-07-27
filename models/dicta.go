@@ -10,19 +10,13 @@ type Dicta struct {
 var queryDicta = `CREATE TABLE if NOT EXISTS dicta(
 	ci_profesor int not null,
 		CONSTRAINT fk_dicta_profesor
-		FOREIGN KEY (ci_profesor) REFERENCES profesor(ci)
-		ON DELETE NO ACTION
-		ON UPDATE NO ACTION,
+		FOREIGN KEY (ci_profesor) REFERENCES profesor(ci),
 	id_recurso int not null,
 		CONSTRAINT fk_dicta_recurso
-		FOREIGN KEY (id_recurso) REFERENCES recurso(idrecurso)
-			ON DELETE NO ACTION
-			ON UPDATE NO ACTION, 
+		FOREIGN KEY (id_recurso) REFERENCES recurso(idrecurso), 
 	id_materia int not null,
 		CONSTRAINT fk_dicta_materia
 		FOREIGN KEY (id_materia) REFERENCES materia(idmateria)
-			ON DELETE NO ACTION
-			ON UPDATE NO ACTION
 )`
 
 //DictaArray un array de la estructura dicta

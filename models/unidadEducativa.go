@@ -43,10 +43,10 @@ func GetUnidadesEducativas() Ues {
 }
 
 //GetUnidadEducativa Devuelve un objeto de unidad educativa segun su id
-func GetUnidadEducativa(idue int) UnidadEducativa {
+func GetUnidadEducativa(idue int) *UnidadEducativa {
 	query := `SELECT * FROM unidadEducativa WHERE idue=?`
 	rows := EjecutarQuery(query, idue)
-	ue := UnidadEducativa{}
+	ue := &UnidadEducativa{}
 	if rows.Next() {
 		rows.Scan(&ue.Idue, &ue.Nombre, &ue.Direccion, &ue.Correo)
 	}
