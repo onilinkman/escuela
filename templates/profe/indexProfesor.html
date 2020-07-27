@@ -1,0 +1,36 @@
+{{define "profesor/index"}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profesores</title>
+        <link rel="stylesheet" href="../../assets/css/estiloIndexProfe.css">
+    </head>
+
+    <body>
+       <header class="cabeza">
+           <div class="cab-titulo">
+               <h1>Bienvenido a la seccion de Docentes</h1>
+           </div>
+           <div class="cab-subtit">
+               <h3>Aqui podra ver a los docentes o iniciar sesion si eres docente</h3>
+           </div>
+       </header> 
+
+       <nav class="navegar">
+            <div class="nav-ini">
+                <a href="./profesor/new" class="nuevoProfe">Registrar Profesor</a>
+            </div>
+
+            <div class="nav-ini">
+                <a href="./profesor/edit" class="editarProfe">Editar</a>
+            </div>
+
+            <div class="nav-ini">
+                <a href="./profesor/login" class="editarProfe">Iniciar Sesion</a>
+            </div>
+
+       </nav>
+    </body>
+
+</html>
+{{end}}
