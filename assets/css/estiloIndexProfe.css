@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    top: 0;
+}
+
+body{
+    background: rgb(175, 175, 175);
+}
+
+.cabeza{
+    background: linear-gradient(rgb(82, 82, 82),rgba(185, 185, 185, 0));
+}
+
+.cab-titulo{
+    font-size: 0.8cm;
+    font-style: italic;
+}
+
+.cab-subtit{
+    margin-top: 8px;
+}
+
+.navegar{
+    background: rgb(46, 44, 44);
+}
+
+.nav-ini a{
+    text-decoration: none;
+}
+
+.nav-ini{
+    float: right;
+    margin-right: 25px;
+    font-style: italic;
+    font-size: 25px;
+}
