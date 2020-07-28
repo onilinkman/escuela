@@ -46,8 +46,6 @@ func LoginProfesor(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 
-	} else {
-		fmt.Println(r.Method)
 	}
 	utils.RenderTemplate(w, "profesor", contexto)
 }
@@ -62,7 +60,19 @@ func LogoutProfesor(w http.ResponseWriter, r *http.Request) {
 func EditProfesor(w http.ResponseWriter, r *http.Request) {
 	context := make(map[string]interface{})
 	profe := utils.GetProfesor(r)
+	if r.Method == "POST" {
+		profe.Nombres = r.FormValue("nombres")
+		profe.Paterno = r.FormValue("paterno")
+		profe.Materno = r.FormValue("materno")
+		profe.Correo = r.FormValue("correo")
+		profe.Contrasenia = r.FormValue("contrasenia")
+		profe.GuardarProfesor()
+		return
+	}
 	context["nombres"] = profe.Nombres
+	context["paterno"] = profe.Paterno
+	context["materno"] = profe.Materno
+	context["correo"] = profe.Correo
 	utils.RenderTemplate(w, "profesor/edit", context)
 }
 

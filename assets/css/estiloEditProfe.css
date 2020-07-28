@@ -1,15 +1,24 @@
-*{
-    padding: 0;
-    top: 0;
-    margin: 0;
-}
 
 header{
     background: linear-gradient(rgb(71, 71, 71),rgba(128, 128, 128, 0.096));
     line-height: 7em;
+    text-align: center;
+    box-shadow: 0px 4px 8px 0 rgb(66, 66, 66);
+    border-radius: 8px 8px 0 0;
+}
+
+body{
+    background: rgb(195, 207, 228);
 }
 
 .cuerpo{
-    background: rgb(175, 171, 171);
     text-align: center;
+}
+.cuerpo-form{
+    background: rgb(212, 206, 206);
+    box-shadow: 0 4px 8px 0 rgb(63, 62, 62);
+    border-radius: 8px;
+    margin-left: 30%;
+    margin-right: 30%;
+    overflow: hidden;
 }
