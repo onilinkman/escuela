@@ -50,7 +50,7 @@ func main() {
 	mux.HandleFunc("/api/v1/ue", v1.CrearUE).Methods("POST")
 
 	server := &http.Server{
-		Addr:    ":8000",
+		Addr:    ":80",
 		Handler: mux,
 	}
 	log.Fatal(server.ListenAndServe())

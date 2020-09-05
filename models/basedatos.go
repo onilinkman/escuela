@@ -12,8 +12,8 @@ var db *sql.DB
 
 var username = "root"
 var password = ""
-var host = "localhost"
-var port = 3306
+var host = "35.239.145.60"
+var port = 80
 var dbname = "Escuela"
 
 //IngresarPassword permite ingresar un password
