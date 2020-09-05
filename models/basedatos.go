@@ -16,6 +16,11 @@ var host = "localhost"
 var port = 3306
 var dbname = "Escuela"
 
+//IngresarPassword permite ingresar un password
+func IngresarPassword(passw string) {
+	password = passw
+}
+
 //Conectar inicia la coneccion a la base de datos
 func Conectar() {
 	coneccion, err := sql.Open("mysql", generarURL())

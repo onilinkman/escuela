@@ -13,6 +13,11 @@ import (
 )
 
 func main() {
+	var passw = ""
+	fmt.Println("Ingrese contrasenia")
+
+	fmt.Scanf("%s", &passw)
+	models.IngresarPassword(passw)
 
 	models.Conectar()
 
