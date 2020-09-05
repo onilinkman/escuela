@@ -11,8 +11,8 @@ import (
 var db *sql.DB
 
 var username = "root"
-var password = "74094512ce"
-var host = "127.0.0.7"
+var password = ""
+var host = "localhost"
 var port = 3306
 var dbname = "Escuela"
 
